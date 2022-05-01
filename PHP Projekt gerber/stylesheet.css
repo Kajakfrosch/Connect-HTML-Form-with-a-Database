@@ -1,0 +1,83 @@
+.titel {
+	background-color: CCCCCC;
+	padding: 20px;
+	text-align: center;
+	font-family:arial, "lucida console", sans-serif
+}
+.navigation {
+	overflow: hidden;
+	background-color: 11F2C5;
+	font-family:arial, "lucida console", sans-serif
+}
+.navigation a{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 17px;
+	text-decoration: none;
+	font-family:arial, "lucida console", sans-serif
+}
+.navigation a:hover{
+	background-color: cyan;
+	color: black;
+	font-family:arial, "lucida console", sans-serif
+	
+}
+.row {
+		background-color: 11F2C5;
+		float: center;
+		display: block;
+		color: blue;
+		text-align: center;
+		text-decoration: none;
+		font-family:arial, "lucida console", sans-serif
+}
+.grossesdiv{
+	overflow: hidden;
+	background-color: 11F2C5;
+	font-family:arial, "lucida console", sans-serif
+}
+.grossesdiv a{
+	float: left;
+	display: block;
+	color: blue;
+	text-align: center;
+	padding: 14px 17px;
+	text-decoration: none;
+	font-family:arial, "lucida console", sans-serif
+}
+.grossesdiv a:hover{
+	background-color: cyan;
+	color: black;
+	font-family:arial, "lucida console", sans-serif
+	
+}
+.mainconatiant {
+	background-color: FFFFFF;
+	float: center;
+	color: black;
+	text-align: center;
+	border-width:10px;
+	border-style:solid;
+	border-color: 11F2C5;
+	width:60%;
+	font-family:arial, "lucida console", sans-serif
+	
+}
+.footer {
+  background-color: #FFFFF5;
+  text-align: center;
+  padding: 10px;
+  border-style:solid;
+  border-color:11F2C5;
+  border-width:10px;
+  width:90%;
+  text-decoration: none;
+  font-family:arial, "lucida console", sans-serif
+}
+textarea { 
+    resize: none;
+    overflow: auto;
+	font-family:arial, "lucida console", sans-serif
+}
