@@ -35,16 +35,16 @@ include 'head.php';
                         <label>Nachname:</label><br>  
                         <input type="text" name="nachname"required><br> 
                         <label>Email:</label><br>  
-                        <input type="email" name="email"required><br>
+                        <input type="text" name="email"required><br>
                         <label>Geburtstag:</label><br>  
-                        <input type="date" id="age" name="Alter" value="2004-09-01"min="1970-01-01" max="2004-12-31"required><br>
+                        <input type="date" id="age" name="bday" value="2004-09-01"min="1970-01-01" max="2004-12-31"required><br>
                         <label>Telefonnummer:</label><br>  
                         <input type="tel" id="phone" name="phone" pattern="[0-4]{3}[9]{1}[0-9]{4}[0-9]{4}[0-9]{4}" required placeholder="0049123412341234"><br>
                     </fieldset> <br>
                     <fieldset>
                         <legend>Daten für Party</legend>
                         <label for="mitbringen">Was bringe ich auf die Party mit? bitte wähle eine Option aus</label> <br>
-                        <select id="mitbringen" required>
+                        <select id="mitbringen" name="mitbringen" required>
                             <option value="beverages">Getränkekasten</option>
                             <option value="food Sweet">Essen (Süß)</option>
                             <option value="food Salty">Essen (Salzig)</option>

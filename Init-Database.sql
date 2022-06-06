@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `games` (
 
 DROP TABLE IF EXISTS `gast`;
 CREATE TABLE IF NOT EXISTS `gast` (
-  `KID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `KID` bigint(20) UNSIGNED NOT NULL,
   `vorname` varchar(15) COLLATE utf8mb4_german2_ci NOT NULL,
   `nachname` varchar(25) COLLATE utf8mb4_german2_ci NOT NULL,
   `Email` varchar(25) COLLATE utf8mb4_german2_ci NOT NULL,
