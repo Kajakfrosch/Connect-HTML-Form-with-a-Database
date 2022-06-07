@@ -13,6 +13,7 @@ include 'head.php';
         <div class="titel">
             <h1>LAN-Party</h1>
             <p>Alles was Sie zum Zocken benötigen</p>
+			<a href="resultate.php">Resultate</a>
         </div>
         <div class="navigation"> 
             <!--Platzhalter-->
@@ -43,16 +44,34 @@ include 'head.php';
                     </fieldset> <br>
                     <fieldset>
                         <legend>Daten für Party</legend>
-                        <label for="mitbringen">Was bringe ich auf die Party mit? bitte wähle eine Option aus</label> <br>
-                        <select id="mitbringen" name="mitbringen" required>
-                            <option value="beverages">Getränkekasten</option>
-                            <option value="food Sweet">Essen (Süß)</option>
-                            <option value="food Salty">Essen (Salzig)</option>
-                            <option value="food healthy">Essen (Gesund)</option>
-                            <option value="donate">20€ Spenden </option>
+                        <label for="game">Lieblingsgame:</label> <br>
+                        <select id="game" name="game" required>
+                            <option value="1">Minecraft</option>
+                            <option value="2">Fortnite</option>
+                            <option value="3">Anno 1800</option>
+                            <option value="4">The Witcher 3</option>
+							<option value="5">Cyberpunk 2077</option>
+							<option value="6">GTA 5</option>
+							<option value="7">GTA 4</option>
+							<option value="8">Red Dead Redemption 2</option>
+							<option value="9">God of War</option>
+							<option value="10">Fallout 4</option>
+							<option value="11">Forza Horizon 4</option>
+							<option value="12">Forza Horizon 5</option>
+							<option value="13">Overwatch</option>
+							<option value="14">Valorant</option>
+							<option value="15">League of Legends</option>
+							<option value="16">Star Wars Battelfront 2</option>
+							<option value="17">Lego Star Wars the Skywalker Saga</option>
                         </select> <br>
-                        <label>Lieblingsgame:</label><br>  
-                        <input type="text" name="game" required><br> 
+                        <label>Was bringe ich auf die Party mit? bitte wähle eine Option aus:</label><br>  
+                        <select id="mitbringen" name="mitbringen" required>
+                            <option value="1">Essen (Süß)</option>
+                            <option value="2">Essen (Salzig)</option>
+                            <option value="3">Essen (Gesund)</option>
+                            <option value="4">20€ Spenden </option>
+							<option value="5">Getränkekasten</option>
+                        </select> <br>
                     </fieldset> <br>
                     <input type="submit" value="Anmelden zur LAN-Party">  
                 <br>
