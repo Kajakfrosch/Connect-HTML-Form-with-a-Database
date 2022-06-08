@@ -2,15 +2,16 @@
 include 'dbconnection.php';
 include 'head.php';
 
-$query ="SELECT vorname, nachname FROM gast";
+$query ="SELECT KID, vorname, nachname FROM gast";
 $result = $verbindung->query($query);
 if($result->num_rows> 0){
 	$options= mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
-foreach($options as $option){
-	//echo print_r($option);
-	echo implode("",$option);
+$query_game ="SELECT Spielename FROM games";
+$result_game = $verbindung->query($query_game);
+if($result_game->num_rows> 0){
+	$options_game= mysqli_fetch_all($result_game, MYSQLI_ASSOC);
 }
 ?>
 
@@ -20,10 +21,12 @@ foreach($options as $option){
 	</head>
 	<body>
 		<h1>Resultate aus den Matches</h1>
+
+		<a href="index.php">Zurück</a><br>
 		
 		<form method="post" action="res-db.php">
-			<label>Gast 1:</label><br>  
-            <select id="game" name="game" required>
+			<label>Sieger:</label><br>  
+            <select id="gast" name="gast" required>
 			<?php
 				foreach($options as $option){
 				?>
@@ -31,7 +34,21 @@ foreach($options as $option){
 				<?php 
 				}
 				?>
-            </select>
+            </select><br>
+			<label>Game:</label><br>  
+            <select id="game" name="game" required>
+			<?php
+				foreach($options_game as $optiong){
+				?>
+					<option><?php echo implode(" ", $optiong); ?></option>
+				<?php 
+				}
+				?>
+            </select><br>
+			<label for="text">Ergebnis</label>
+      		<textarea name="ergebnis" cols="35" rows="4"></textarea> 
+			<input type="submit" value="Resultate eintragen">
 		</form>
+
 	</body>
 </html>

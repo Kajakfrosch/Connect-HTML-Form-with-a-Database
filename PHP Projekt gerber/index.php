@@ -73,7 +73,7 @@ include 'head.php';
 							<option value="5">Getränkekasten</option>
                         </select> <br>
                     </fieldset> <br>
-                    <input type="submit" value="Anmelden zur LAN-Party">  
+                    <input type="submit" value="Anmelden zur LAN-Party">
                 <br>
                 <br>
                 <br>
