@@ -2,7 +2,7 @@
 include 'dbconnection.php';
 
 
-$sql = "SELECT gast.vorname,gast.nachname,platzierung.Beschreibung FROM platzierung,buchung,gast WHERE buchung.EID = platzierung.EID AND gast.KID = buchung.KID";
+$sql = "SELECT gast.vorname,gast.nachname,platzierung.Beschreibung FROM platzierung,buchung,gast WHERE gast.KID = buchung.KID";
 $result = $verbindung->query($sql);
 
 if ($result->num_rows > 0) {
@@ -13,5 +13,4 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
-
 ?>

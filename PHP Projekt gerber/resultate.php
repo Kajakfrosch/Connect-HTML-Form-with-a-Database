@@ -8,7 +8,7 @@ if($result->num_rows> 0){
 	$options= mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
-$query_game ="SELECT Spielename FROM games";
+$query_game ="SELECT GID, Spielename FROM games";
 $result_game = $verbindung->query($query_game);
 if($result_game->num_rows> 0){
 	$options_game= mysqli_fetch_all($result_game, MYSQLI_ASSOC);

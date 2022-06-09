@@ -2,7 +2,9 @@
 include 'dbconnection.php';
 
 $sieger = $_POST['gast'][0];
-$game = $_POST['game'];
+echo $sieger;
+$game = $_POST['game'][0];
+echo $game;
 $ergebnis = $_POST['ergebnis'];
 
 $insert_ergebnis = "INSERT INTO platzierung (beschreibung) VALUES ('$ergebnis')";
