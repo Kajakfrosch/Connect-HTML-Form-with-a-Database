@@ -8,6 +8,11 @@ Gibt alle Gäste aus und ihre Platzierung und in Welchem Game diese Platzierung 
 Gibt alle Kontaktdaten aus von Gästen die etwas Mitbringen
 5.	Select count(GA.KID),GA.Vorname From Gast GA Group BY GA.Vorname
 Zählt alle GA.KID Datensätze (KID kann nicht Null sein) und gibt den Vorname und die Anzahl der Datensätze aus
+6. SELECT gast.vorname,gast.nachname,platzierung.Beschreibung FROM platzierung,buchung,gast WHERE gast.KID = buchung.KID AND platzierung.EID = buchung.EID
+Gibt Vornamen und Nachnamen und die Platzierungs Beschreibung aus 
+7. SELECT gast.vorname,gast.nachname,gast.Geburtstag,food.Beschreibung FROM gast,food,mitbringen WHERE gast.KID = mitbringen.KID AND food.FoodID = mitbringen.FoodID
+Gibt alle Besucher aus inklusive des Mitgebrachtem
+8.
  
 
 
