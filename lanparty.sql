@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -20,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `lanparty`
 --
+
+USE `lanparty`;
 
 -- --------------------------------------------------------
 
@@ -30,7 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `buchung` (
   `BID` bigint(20) UNSIGNED NOT NULL,
   `KID` int(11) NOT NULL,
-  `EID` int(11) NOT NULL
+  `EID` int(11) NOT NULL,
+  `GID` bigint(20) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
 
 -- --------------------------------------------------------
@@ -129,7 +131,7 @@ INSERT INTO `gast` (`KID`, `vorname`, `nachname`, `Email`, `Geburtstag`, `Telefo
 CREATE TABLE `lieblingsgame` (
   `LGID` bigint(20) UNSIGNED NOT NULL,
   `KID` int(11) NOT NULL,
-  `GID` int(11) NOT NULL
+  `GID` int(11) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_german2_ci;
 
 --
@@ -188,7 +190,10 @@ CREATE TABLE `platzierung` (
 --
 ALTER TABLE `buchung`
   ADD PRIMARY KEY (`BID`),
-  ADD UNIQUE KEY `BID` (`BID`);
+  ADD UNIQUE KEY `BID` (`BID`),
+  FOREIGN KEY(KID) REFERENCES gast(KID),
+  FOREIGN KEY(EID) REFERENCES platzierung(EID),
+  FOREIGN KEY(GID) REFERENCES games(GID);
 
 --
 -- Indizes für die Tabelle `food`
@@ -216,14 +221,18 @@ ALTER TABLE `gast`
 --
 ALTER TABLE `lieblingsgame`
   ADD PRIMARY KEY (`LGID`),
-  ADD UNIQUE KEY `LGID` (`LGID`);
+  ADD UNIQUE KEY `LGID` (`LGID`),
+  FOREIGN KEY(KID) REFERENCES gast(KID),
+  FOREIGN KEY(GID) REFERENCES games(GID);
 
 --
 -- Indizes für die Tabelle `mitbringen`
 --
 ALTER TABLE `mitbringen`
   ADD PRIMARY KEY (`MID`),
-  ADD UNIQUE KEY `MID` (`MID`);
+  ADD UNIQUE KEY `MID` (`MID`),
+  FOREIGN KEY(KID) REFERENCES gast(KID),
+  FOREIGN KEY(FoodID) REFERENCES food(FoodID);
 
 --
 -- Indizes für die Tabelle `platzierung`
