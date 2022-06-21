@@ -1,0 +1,7 @@
+Gast(KID, Vorname, Nachname, Email, Geburtstag, Telefonnummer)
+Lieblingsgame(LGID, KID, GID)
+Games(GID, Name, Beschreibung, Lokalspielbar)
+Mitbringen(MID, KID, FoodID)
+Food(FoodID, Typ, Beschreibung)
+Buchung(BID, KID, EID, GID)
+Platzierung(EID, Typ, Beschreibung)
