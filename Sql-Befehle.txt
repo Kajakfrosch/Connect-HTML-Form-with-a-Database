@@ -1,1 +1,10 @@
+1.	Select GA.Vorname,GA.Nachname,G.Name,G.Beschreibung From Gast GA, Lieblingsgame LG,Games G WHERE GA.KID = LG.KID AND G.GID = LG.GID;
+Zeigt alle Gäste an und ihr Lieblingsgame
+2.	Select GA.Vorname,GA.Nachname,Food.Name,Food.Beschreibung From Gast GA, Mitbringen Mit,Food  WHERE GA.KID = MIT.KID AND MIT.FoodID = Food.FoodID;
+Gibt alle Gäste aus und was sie mitbringen
+3.	Select GA.Vorname,GA.Nachname,Pla.Name,Pla.Beschreibung From Gast GA, buchung bu,  Platzierung Pla,Games G WHERE GA.KID = bu.KID AND bu.EID = Pla.EID AND bu.GID = G.GID;
+Gibt alle Gäste aus und ihre Platzierung und in Welchem Game diese Platzierung ist
+4.	Select GA.Nachname,GA.Email,GA.Telefonnummer,Food.Name,Food.Typ From Gast GA, Mitbringen Mit,Food  WHERE GA.KID = MIT.KID AND MIT.FoodID = Food.FoodID AND MIT.KID != null;
+Gibt alle Kontaktdaten aus von Gästen die etwas Mitbringen
+5.	
 
