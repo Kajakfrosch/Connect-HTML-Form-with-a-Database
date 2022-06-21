@@ -13,7 +13,8 @@ include 'head.php';
         <div class="titel">
             <h1>LAN-Party</h1>
             <p>Alles was Sie zum Zocken benötigen</p>
-			<a href="resultate.php">Resultate</a>
+			<a href="resultate.php">Resultate</a><br>
+            <a href="besucher-anzeigen.php">Alle Besucher</a>
         </div>
         <div class="navigation"> 
             <!--Platzhalter-->
