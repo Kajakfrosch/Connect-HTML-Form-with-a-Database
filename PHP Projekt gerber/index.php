@@ -9,12 +9,13 @@ include 'head.php';
     </head>
     
     <body>
-        <center>
         <div class="titel">
             <h1>LAN-Party</h1>
             <p>Alles was Sie zum Zocken benötigen</p>
-			<a href="resultate.php">Resultate</a><br>
-            <a href="besucher-anzeigen.php">Alle Besucher</a>
+			<a id="submit" href="resultate.php">Turnierformular</a>
+            <a id="submit" href="alle-ergebnisse.php">Resultate</a>
+            <a id="submit" href="teilnehmer.php">Teilnehmer</a>
+            <a id="submit" href="mitnehmen.php">Essensspenden</a>
         </div>
         <div class="navigation"> 
             <!--Platzhalter-->
@@ -74,7 +75,7 @@ include 'head.php';
 							<option value="5">Getränkekasten</option>
                         </select> <br>
                     </fieldset> <br>
-                    <input type="submit" value="Anmelden zur LAN-Party">
+                    <input id="submit" type="submit" value="Anmelden zur LAN-Party">
                 <br>
                 <br>
                 <br>
@@ -87,14 +88,6 @@ include 'head.php';
                 <br>
                 <br>
             </div>
-            </center>
-
-            <center>
-                <div class="footer">
-                <a href="Datenschutz.html">Datenschutz</a> <a href="impressum.html">Impressum</a> 
-                </div>
-            </center>
         </div>
-
     </body>
 </html>
