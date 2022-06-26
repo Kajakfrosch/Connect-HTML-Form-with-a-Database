@@ -18,8 +18,8 @@ $count_gast = mysqli_fetch_assoc($result_gast)['COUNT(KID)'];
 $anzahl_gast = $count_gast + 1;
 $index_KID = $anzahl_gast ;
 
-$sql_games = "SELECT COUNT(GID) FROM game WHERE Name = '$lieblingsgame' ORDER BY CAST(COUNT(GID) AS UNSIGNED INTEGER)";
-$result_games = mysqli_query($verbindung, $sql_games);
+$sql_games = "SELECT COUNT(GID) FROM games WHERE Spielename = '$lieblingsgame' ORDER BY CAST(COUNT(GID) AS UNSIGNED INTEGER)";
+$result_games = mysqli_query($verbindung, $sql_games); 
 $count_games = mysqli_fetch_assoc($result_games)['COUNT(GID)'];
 $anzahl_games = $count_games + 1;
 
@@ -35,5 +35,5 @@ $insert_lieblingsspiel = "INSERT INTO lieblingsgame (KID, GID) VALUES ('$index_K
 $q2 = $verbindung->prepare($insert_lieblingsspiel);
 $q2->execute();
 
-header("Location: index.php");
+header("Location: teilnehmer.php");
 ?>
