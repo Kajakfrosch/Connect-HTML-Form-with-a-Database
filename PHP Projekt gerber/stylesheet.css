@@ -1,14 +1,19 @@
+html {
+	font-family: arial, "lucida console", sans-serif;
+}
+
 .titel {
-	background-color: CCCCCC;
+	background-color: #ccc;
 	padding: 20px;
 	text-align: center;
-	font-family:arial, "lucida console", sans-serif
+	display: block;
 }
+
 .navigation {
 	overflow: hidden;
-	background-color: 11F2C5;
-	font-family:arial, "lucida console", sans-serif
+	background-color: #11F2C5;
 }
+
 .navigation a{
 	float: left;
 	display: block;
@@ -16,68 +21,93 @@
 	text-align: center;
 	padding: 14px 17px;
 	text-decoration: none;
-	font-family:arial, "lucida console", sans-serif
 }
+
 .navigation a:hover{
 	background-color: cyan;
 	color: black;
-	font-family:arial, "lucida console", sans-serif
+	
 	
 }
 .row {
-		background-color: 11F2C5;
-		float: center;
-		display: block;
-		color: blue;
-		text-align: center;
-		text-decoration: none;
-		font-family:arial, "lucida console", sans-serif
-}
-.grossesdiv{
-	overflow: hidden;
-	background-color: 11F2C5;
-	font-family:arial, "lucida console", sans-serif
-}
-.grossesdiv a{
-	float: left;
+	background-color: #11F2C5;
+	float: center;
 	display: block;
 	color: blue;
 	text-align: center;
-	padding: 14px 17px;
 	text-decoration: none;
-	font-family:arial, "lucida console", sans-serif
+	display: flex;
+ 	justify-content: center;
+   	align-items: flex-start;
 }
-.grossesdiv a:hover{
-	background-color: cyan;
-	color: black;
-	font-family:arial, "lucida console", sans-serif
-	
-}
+
 .mainconatiant {
-	background-color: FFFFFF;
+	background-color: #FFFFFF;
 	float: center;
 	color: black;
 	text-align: center;
 	border-width:10px;
 	border-style:solid;
-	border-color: 11F2C5;
+	border-color: #11F2C5;
 	width:60%;
-	font-family:arial, "lucida console", sans-serif
-	
 }
-.footer {
-  background-color: #FFFFF5;
-  text-align: center;
-  padding: 10px;
-  border-style:solid;
-  border-color:11F2C5;
-  border-width:10px;
-  width:90%;
-  text-decoration: none;
-  font-family:arial, "lucida console", sans-serif
-}
+
 textarea { 
     resize: none;
     overflow: auto;
-	font-family:arial, "lucida console", sans-serif
+}
+
+#submit {
+	padding: 10px;
+	background-color: red;
+	border-radius: 10px;
+	border-color: #000;
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+}
+
+#res-form {
+	display: flex;
+	justify-content: center;
+   	align-items: center;
+	flex-direction: column;
+	background-color: #11F2C5;
+	border-width:10px;
+	border-style:solid;
+	border-color: #11F2C5;
+}
+
+#formular {
+	display: flex;
+	justify-content: flex-start;
+   	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	float: center;
+	background-color: white;
+	width: 90%;
+	padding: 14px;
+}
+
+#teilnehmer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
+	background-color: #11F2C5;
+	border-width:10px;
+	border-style:solid;
+	border-color: #11F2C5;
+}
+
+#gast {
+	display: block;
+	flex-direction: row;
+	margin: 10px;
+}
+
+#gast div {
+	padding: 10px;
+	background-color: white;
+	font-size: 28px;
+	font-weight: bold;
 }

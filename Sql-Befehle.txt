@@ -1,18 +1,59 @@
-1.	Select GA.Vorname,GA.Nachname,G.Name,G.Beschreibung From Gast GA, Lieblingsgame LG,Games G WHERE GA.KID = LG.KID AND G.GID = LG.GID;
+1.	Select GA.Vorname,GA.Nachname,G.Spielename,G.Beschreibung From Gast GA, Lieblingsgame LG,Games G WHERE GA.KID = LG.KID AND G.GID = LG.GID;
 Zeigt alle Gäste an und ihr Lieblingsgame
+
 2.	Select GA.Vorname,GA.Nachname,Food.Name,Food.Beschreibung From Gast GA, Mitbringen Mit,Food  WHERE GA.KID = MIT.KID AND MIT.FoodID = Food.FoodID;
 Gibt alle Gäste aus und was sie mitbringen
-3.	Select GA.Vorname,GA.Nachname,Pla.Name,Pla.Beschreibung From Gast GA, buchung bu,  Platzierung Pla,Games G WHERE GA.KID = bu.KID AND bu.EID = Pla.EID AND bu.GID = G.GID;
+
+3.	Select GA.Vorname,GA.Nachname,Pla.Spielename,Pla.Beschreibung From Gast GA, buchung bu,  Platzierung Pla,Games G WHERE GA.KID = bu.KID AND bu.EID = Pla.EID AND bu.GID = G.GID;
 Gibt alle Gäste aus und ihre Platzierung und in Welchem Game diese Platzierung ist
+
 4.	Select GA.Nachname,GA.Email,GA.Telefonnummer,Food.Name,Food.Typ From Gast GA, Mitbringen Mit,Food  WHERE GA.KID = MIT.KID AND MIT.FoodID = Food.FoodID AND MIT.KID != null;
 Gibt alle Kontaktdaten aus von Gästen die etwas Mitbringen
+
 5.	Select count(GA.KID),GA.Vorname From Gast GA Group BY GA.Vorname
 Zählt alle GA.KID Datensätze (KID kann nicht Null sein) und gibt den Vorname und die Anzahl der Datensätze aus
+
 6. SELECT gast.vorname,gast.nachname,platzierung.Beschreibung FROM platzierung,buchung,gast WHERE gast.KID = buchung.KID AND platzierung.EID = buchung.EID
 Gibt Vornamen und Nachnamen und die Platzierungs Beschreibung aus 
+
 7. SELECT gast.vorname,gast.nachname,gast.Geburtstag,food.Beschreibung FROM gast,food,mitbringen WHERE gast.KID = mitbringen.KID AND food.FoodID = mitbringen.FoodID
 Gibt alle Besucher aus inklusive des Mitgebrachtem
-8.
- 
 
+8. SELECT buchung.BID AS Buchung, gast.vorname AS Vorname, gast.nachname AS Nachname, games.Spielename AS Spiel,  platzierung.Beschreibung AS Ergebnis FROM buchung, gast, games, platzierung WHERE gast.KID = buchung.KID AND platzierung.EID = buchung.EID AND platzierung.Typ = games.Spielename
+Zeigt alle Datensätze, die die Resultate aus den Matches zeigt, die man ausgetragen hat
 
+9. SELECT gast.vorname,gast.nachname,gast.Geburtstag,food.Beschreibung FROM gast,food,mitbringen WHERE gast.KID = mitbringen.KID AND food.FoodID = mitbringen.FoodID
+Es stellt alles dar, was von wem mitgebracht wird
+
+10. SELECT COUNT(KID) FROM gast ORDER BY CAST(COUNT(KID) AS UNSIGNED INTEGER)
+Zählt die Anzahl an Gästen
+
+11. INSERT INTO gast (KID ,vorname, nachname, Email, Geburtstag, Telefonnummer) VALUES ('$anzahl_gast','$vorname', '$nachname', '$email', '$insertdate', '$telefonnummer')
+Erstellt einen Gast mit allen nötigen Attributen
+
+12. INSERT INTO mitbringen (KID, FoodID) VALUES ('$index_KID', '$mitbringen')
+Stellt eine Verbindung des Gasts mit der mitgebrachten Spende her
+
+13. INSERT INTO lieblingsgame (KID, GID) VALUES ('$index_KID', '$lieblingsgame')
+Stellt eine Verbindung des Gasts mit seinem Lieblinsspiel her
+
+14. SELECT food.Beschreibung AS Spende, gast.vorname AS Vorname, gast.nachname AS Nachname FROM mitbringen, gast, food WHERE gast.KID = mitbringen.KID AND food.FoodID = mitbringen.FoodID
+Zeigt, wer alles was gespendet hat
+
+15. INSERT INTO platzierung (beschreibung, Typ) VALUES ('$ergebnis', '$game')
+Ein Ergebnis eines Matchs wird mit dem Resultat festgehalten
+
+16. SELECT COUNT(BID) FROM buchung
+Zählt die Anzahl der gespielten Matches
+
+17. INSERT INTO buchung (BID, EID, KID) VALUES ('$anzahl_bid','$last_id','$sieger')
+Erstellt ein Match mit den nötigen Attributen
+
+18. SELECT KID, vorname, nachname FROM gast
+Zeigt Gäste mit den Attributen KID, Vorname und Nachname an
+
+19. SELECT Spielename FROM games
+Zeigt alle Spiele
+
+20. SELECT * FROM gast
+Zeigt alles aus der Tabelle 'Gast'
