@@ -23,7 +23,7 @@ include 'head.php';
                     .$zeile["nachname"] ."</div><div>E-Mail: "
                     .$zeile["Email"] ."</div><div>Geburtstag: "
                     .$zeile["Geburtstag"] ."</div><div>Tel:"
-                    .$zeile["Telefonnummer"] . "</div></div>"; //Telefonnummer kann max. 32-Bit lang sein -> Größtmögliche Zahl ist 2,147 Mrd.
+                    .$zeile["Telefonnummer"] . "</div></div>";
                 }
             ?>
         </div>

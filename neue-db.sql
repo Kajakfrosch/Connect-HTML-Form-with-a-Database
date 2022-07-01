@@ -90,24 +90,12 @@ INSERT INTO games (GID, Beschreibung, Spielename, Lokalspielbar) VALUES
 
 INSERT INTO gast (KID, vorname, nachname, Email, Geburtstag, Telefonnummer) VALUES
 (1, 'Luis', 'Schumacher', 'Luis@3test.de', 20031210, 49123412341234),
-(2, 'Nico', 'Schumacher', 'Nico@test.de', 20031210, 49123412341234),
-(3, 'Nico', 'Schumacher', 'Nico@test.de', 20031210, 49123412341234),
-(4, 'avner', 'Netalov', 'Avner.Nektalov@L-Bank.de', 20000928, 49123412341234),
-(5, 'Luis', 'Schumacher', 'Luisschumacher4@web.de', 20040901, 49123412341234),
-(6, 'Maxi', 'Loock', 'maxi.loock@L-bank.de', 20041209, 49123412341234),
-(7, 'Maxi', 'Loock', 'test14430706@test.de', 20040901, 49123412341234);
+(2, 'Avner', 'Nektalov', 'Avner@test.de', 20000928, 49123412341234),
 
 INSERT INTO lieblingsgame (LGID, KID, GID) VALUES
 (1, 3, 1),
-(2, 4, 1),
-(3, 5, 1),
-(4, 6, 1),
-(5, 7, 11);
+(2, 2, 1),
 
 INSERT INTO mitbringen (MBID, KID, FoodID) VALUES
 (1, 2, 1),
-(2, 3, 1),
-(3, 4, 1),
-(4, 5, 5),
-(5, 6, 3),
-(6, 7, 4); 
+(2, 1, 3),
